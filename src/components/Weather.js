@@ -7,6 +7,7 @@ export const Weather = () => {
     const location = Location();
     if (location) {
         weatherApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${location.lat}&lon=${location.lon}&exclude=minutely,hourly,alerts&appid=fccd39a3e71f0487867379ec0acbc2cd`;
+        // weatherApi = `https://api.openweathermap.org/data/2.5/onecall?lat=-6.0187&lon=106.0558&exclude=minutely,hourly,alerts&appid=fccd39a3e71f0487867379ec0acbc2cd`;
     } else {
         console.log("Location masih undifined");
     }
@@ -24,6 +25,8 @@ export const Weather = () => {
     }, [weatherApi])
 
     if (weather) {
+        console.log("city :" + location.city);
+        console.log(weather);
         return (
             {
                 city: location.city,

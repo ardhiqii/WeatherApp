@@ -6,7 +6,7 @@ import weatherIcons from './Assets/weather-icons.svg';
 
 function App() {
   const weather = Weather();
-  console.log(weather);
+  // console.log(weather);
   // ### Date ###
   const date = new Date();
   const year = date.getUTCFullYear();
@@ -32,7 +32,9 @@ function App() {
 
   // weather-icons
   const icons = {
+    "02d": ["300px", "0px"],
     "03d": ["100px", "0px"],
+    "04d": ["0px", "0px"],
     "10d": ["300px", "300px"]
   }
   let forecastWeathers = null;
@@ -40,9 +42,6 @@ function App() {
     forecastWeathers = weather.forecast.slice(1, 6).map((forecastWeather, index) => {
       let x = icons[(forecastWeather.weather[0].icon)][0];
       let y = icons[(forecastWeather.weather[0].icon)][1];
-      // console.log(icons[(t[index])][1]);
-      // let x = icons[(t[index])][0];
-      // let y = icons[(t[index])][1];
       return (
         <div className={`forecast-weather ${(index >= 3) ? 'upper-700' : ''}`} key={`after-current-${index + 1}`} id={`after-current-${index + 1}`} >
           <div className="weather-icons">
