@@ -4,7 +4,6 @@ export const Location = () => {
     const [location, setLocation] = useState(null)
     let url;
     let rawCity;
-    let city;
     useEffect(() => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
@@ -16,12 +15,17 @@ export const Location = () => {
             });
         }
     }, [url])
-    if (location) {
+    if (location !== null) {
         rawCity = location.features[0].properties.city;
-        city = rawCity.split(" ")[0];
+        // city = rawCity.split(" ")[0];
+        // city = [location.features[0].geometry.coordinates[0], location.features[0].geometry.coordinates[1]]
+        return (
+            {
+                city: rawCity.split(" ")[0],
+                lat: location.features[0].geometry.coordinates[1],
+                lon: location.features[0].geometry.coordinates[0]
+            }
+        )
     }
-    return (
-        city
-    )
 
 }       
