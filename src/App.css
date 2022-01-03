@@ -62,11 +62,22 @@ h1 {
   flex-direction: column;
 }
 
+.location-date .date{
+  margin-top: .8em;
+  margin-bottom: 7em;
+}
+
+.current-weather .current-desc{
+  margin-top: .5em;
+}
+
+
+
 .forecast-weathers {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin-top: 7em;
+  justify-content: space-evenly;
+  margin-top: 8em;
   min-width: 200px;
 }
 
@@ -90,10 +101,6 @@ h1 {
   color: var(--date-color);
   letter-spacing: var(--line-space-eight);
 }
-.location-date .date{
-  margin-top: .8em;
-  margin-bottom: 6em;
-}
 
 .current-weather .current-temp{
   letter-spacing: 0;
@@ -103,10 +110,6 @@ h1 {
 .current-weather .current-desc{
   letter-spacing: var(--line-space-eight);
 }
-.current-weather .current-desc{
-  margin-top: .5em;
-}
-
 
 .forecast-weather .forecast-day,
 .forecast-weather .forecast-temp {

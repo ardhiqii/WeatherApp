@@ -32,10 +32,15 @@ function App() {
 
   // weather-icons
   const icons = {
+    "01d": ["200px", "0px"],
     "02d": ["300px", "0px"],
-    "03d": ["100px", "0px"],
-    "04d": ["0px", "0px"],
-    "10d": ["300px", "300px"]
+    "03d": ["0px", "0px"],
+    "04d": ["100px", "0px"],
+    "09d": ["200px", "300px"],
+    "10d": ["300px", "300px"],
+    "11d": ["500px", "0px"],
+    "13d": ["300px", "100px"],
+    "50d": ["0px", "100px"]
   }
   let forecastWeathers = null;
   if (weather) {
