@@ -15,7 +15,7 @@ export const Location = () => {
             });
         }
     }, [url])
-    if (location !== null) {
+    if (location != null) {
         rawCity = location.features[0].properties.city;
         // city = rawCity.split(" ")[0];
         // city = [location.features[0].geometry.coordinates[0], location.features[0].geometry.coordinates[1]]
